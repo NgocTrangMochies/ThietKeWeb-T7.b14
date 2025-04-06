@@ -1,0 +1,84 @@
+<!DOCTYPE html><html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            display: grid;
+            grid-template-areas: 
+                "header header header"
+                "aside1 content aside2"
+                "footer footer footer";
+            grid-template-columns: 1fr 2fr 1fr;
+            grid-template-rows: auto 1fr auto;
+            gap: 0px;
+            padding: 10px;
+            min-height: 80vh;
+        }
+        header {
+            grid-area: header;
+            background: rgb(255, 201, 154);
+            padding: 10px;
+            text-align: center;
+        }
+        .aside1 {
+            grid-area: aside1;
+            background: rgb(255, 255, 153);
+            padding: 10px;
+        }
+        main {
+            grid-area: content;
+            background: rgb(180, 236, 255);
+            padding: 10px;
+        }
+        .aside2 {
+            grid-area: aside2;
+            background: rgb(255, 175, 230);
+            padding: 10px;
+        }
+        footer {
+            grid-area: footer;
+            background: rgb(170, 255, 170);
+            padding: 10px;
+            text-align: center;
+        }
+        @media (max-width: 1200px) {
+            body {
+                grid-template-areas: 
+                    "header header"
+                    "content content"
+                    "aside1 aside2"
+                    "footer footer";
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        @media (max-width: 600px) {
+            body {
+                grid-template-areas: 
+                    "header"
+                    "content"
+                    "aside1"
+                    "aside2"
+                    "footer";
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>Header</header>
+    <aside class="aside2">Aside 1</aside>
+    <main>Mo den Pexbor Layeut (Flexible Boa) (Thee Khuyta aghj cis 113C Ll re thang 10 nam 2017) nham mye
+        đich cung cấp một cách bố trì, táp sếp và phần phối không gủan hiệu gaả bư các irem trong trong một containet, ngay cá khi kích thuớc của chúng không xác định hoặc động (Do đó có từ "Bex"),
+    <img src="https://yenbai.gov.vn/noidung/tintuc/PublishingImages/Thong-Tin-Tinh/Thang-Canh-Du-Lich/mu-cang-chi.jpg" alt="">
+    </main>
+    <aside class="aside1">Aside 2</aside>
+    <footer>Footer</footer>
+</body>
+</html>
